@@ -1,1 +1,85 @@
-/* Put your CSS here */
+
+
+
+
+
+body {
+    background: rgb(61, 226, 111);
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+}
+
+.main-header {
+    flex: 0 1 auto;
+}
+
+.main-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+a[href="#"] {
+    text-decoration: none;
+}
+
+.logo-text {
+    background: rgb(0, 0, 0);
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.detail-image-title {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    position: absolute;
+    bottom: -16px;
+    left: 4px;
+    text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
+}
+
+.detail-image-frame {
+    position: relative;
+    text-align: center;
+
+    transition: transform 333ms;
+}
+
+.thumbnail-title {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    display: block;
+    font-size: 18px;
+    margin: 0;
+    padding: 0.4em 1em;
+}
+
+.hidden-detail .thumbnail-list {
+    flex-direction: column;
+    align-items: center;
+}
+
+html, body {
+    height: 100%;
+}
+
+.main-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-image {
+    width: 90%;
+}
+
+.hidden-detail .thumbnail-list {
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden-detail .thumbnail-item {
+    max-width: 80%
+}
