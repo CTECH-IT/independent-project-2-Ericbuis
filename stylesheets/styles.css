@@ -6,113 +6,328 @@
 
 
 
-html, body {
-    height: 100%;
-}
-
-body {
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #CEEBF7;
+    margin: 0 auto;
+    line-height: 1.6;
     display: flex;
     flex-direction: column;
-    font-size: 10px;
-    background: rgb(78, 194, 78);
-}
-
-a {
+    min-height: 100vh;
+  }
+  
+  a {
     text-decoration: none;
-}
-
-.main-header {
-    flex: 0 1 auto;
-}
-
-.logo-text {
-    background: white;
-    font-family: 'MemphisRiver', sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 37px;
-}
-
-.main-content {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.thumbnail-item {
-    display: inline-block;
-    min-width: 120px;
-    max-width: 120px;
-    border: 1px solid rgb(100%, 100%, 100%);
-    border: 1px solid rgba(100%, 100%, 100%, 0.8);
-}
-
-.thumbnail-list {
-    flex: 0 1 auto;
-    order: 2;
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0;
-    white-space: nowrap;
-    overflow-x: auto;
-}
-
-.thumbnail-image {
-    display: block;
-    width: 100%;
-}
-
-.thumbnail-title {
-    display: block;
+  }
+  
+  p {
+    font-size: .95em;
+  }
+  
+  ul {
     margin: 0;
-    padding: 4px 10px;
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-}
-
-.detail-image-container {
-    flex: 1 1 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.detail-image-frame {
-    position: relative;
+    padding: 0;
+    list-style: none;
+  }
+  
+  h2 {
     text-align: center;
-}
-
-.detail-image {
-    width: 190%;
-}
-
-.detail-image-title {
-    position: absolute;
-    bottom: -16px;
-    left: 4px;
-    font-family: 'MemphisRiver';
-    color: white;
-    text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
-    font-size: 40px;
-}
-
-@media all and (min-width: 768px) {
-    /* Styles will go here */
-    .main-content {
-        flex-direction: row;
-        overflow: hidden;
+  }
+  
+  
+  h2 {
+    color: #093a58;
+    margin-top: 0;
+  }
+  
+  .name {
+    font-size: 1.35em;
+    margin: 0;
+  
+  }
+  .name a {
+    color: #093a58;
+  }
+  
+  .name a,
+  .main-nav a {
+    text-align: center;
+    display: block;
+    padding: 10px 15px;
+  }
+  
+  .main-nav {
+    padding: 10px 0;
+    color: blue;
+  }
+  
+  .main-nav a {
+    font-size: .95em;
+    display: block;
+    padding: 10px 15px;
+    color: #44b5e6;
+    text-transform: uppercase;
+  }
+  
+  .main-nav a:hover {
+    color: #093a58;
+  }
+  
+  .banner {
+    text-align: center;
+  }
+  
+  .main-header {
+    padding-top: .5em;
+  }
+  
+  .headline {
+    font-size: 2.2rem;
+    color: red;
+    font-weight: normal;
+    line-height: 1.3;
+    text-shadow: 2px 2px 1px rgba(0,0,0, .8);
+    margin: 12px 0 0;
+    font-family: serif;
+  }
+  
+  .container {
+      font-family: serif;
+          max-width: 1150px;
+          margin: 0 auto;
+      flex: 1;
+  }
+  
+  .banner {
+    margin-bottom: 30px;
+    padding-top: 250px;
+    height: 350px;
+    background: linear-gradient(to top, white, transparent), url(../img/kids-on-bikes.jpg);
+    background-position: 0 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .col {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  
+  .primary {
+    margin: 20px 0;
+  
+  }
+  
+  .image {
+    max-width: 100%;
+    width: 190px;
+    box-shadow: 10px 15px 10px rgba(0,0,0, .8);
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+  }
+  
+  .logo {
+    text-align: center;
+  
+  }
+  
+  .social-icon  {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+  }
+  
+  .main-footer a {
+    color: #44b5e6;
+  }
+  
+  .main-footer a:hover {
+    color: #07324d;
+  }
+  
+  .main-footer p {
+    margin: 0;
+  }
+  
+  .btt {
+    margin-top: 1em;
+  }
+  
+  .main-footer {
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 10px solid #44b5e6;
+    text-align: center;
+    font-family: serif;
+    background-color: lightblue;
+  }
+  
+  .get-title h1 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  .donate {
+    align-self: center;
+    padding-bottom: 20px;
+  }
+  
+  .volunteer {
+    max-width: 100%;
+    width: 250px;
+    box-shadow: 10px 15px 10px rgba(0,0,0, .8);
+    border-radius: 10px;
+  }
+  
+  .get-col3 {
+    padding-top: 20px;
+  }
+  
+  .get-col3 p {
+    text-align: left;
+  }
+  
+  .links {
+    line-height: 1.2em;
+    padding: 10px 0;
+    padding: 0 5%;
+  }
+  
+  .links a {
+    padding: 10px 0;
+    font-size: .9em;
+  }
+  
+  .links a:hover {
+    color: red;
+  }
+  
+  .q-wrapper {
+    padding: 20px 5%;
+  }
+  
+  .ron h2,
+  .joe h2 {
+    padding-top: 10px;
+    text-align: center;
+  }
+  
+  .ron,
+  .joe {
+    text-align: center;
+  }
+  
+  .pics {
+    max-width: 100%;
+    width: 300px;
+    box-shadow: 10px 15px 10px rgba(0,0,0, .8);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .a-col1 {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  
+  .a-col2 {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  
+  @media (min-width: 768px) {
+  
+    p {
+      font-size: 1.1em;
     }
-    .thumbnail-list {
-        flex-direction: column;
-        order: 0;
-        margin-left: 20px;
+  
+    .main-header,
+    .container {
+      width: 90%;
+      margin: 0 auto 20px;
     }
-    .thumbnail-item {
-        max-width: 260px;
+  
+    .main-header,
+    .main-nav,
+    .container {
+      display: flex;
     }
-    .thumbnail-item+.thumbnail-item {
-        margin-top: 20px;
+  
+    .main-header {
+      flex-direction: column;
+      align-items: center;
     }
-}
+  
+    .col {
+      flex: 1;
+      flex-basis: 50%
+    }
+  
+    .container {
+      flex-wrap: wrap;
+    }
+  
+    .third {
+      order: -1;
+    }
+  
+    .a-wrapper {
+      max-width: 1300px;
+    }
+  
+    .pic-h2 {
+      float: left;
+      width: 50%;
+      padding-bottom: 20px;
+    }
+  
+    .ron-p,
+    .joe-p {
+      float: right;
+      width: 50%;
+      font-size: .9em;
+    }
+    
+  }
+  
+  @media (min-width: 1100px) {
+  
+    body {
+      padding-top: 70px;
+    }
+  
+    .container {
+      width: 95%;
+      max-width: 1150px;
+    }
+  
+    .main-header {
+      flex-direction: row;
+      justify-content: space-between;
+      position: fixed;
+      background-color: #CEEBF7;
+      box-shadow: 0 1px 4px rgba(0,0,0,.4);
+      width: 100%;
+      top: 0;
+    }
+  
+    .col {
+      flex-basis: 0;
+    }
+  
+    .logo-mission {
+      flex-grow: 1.4;
+    }
+ }
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
